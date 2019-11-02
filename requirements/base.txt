@@ -18,5 +18,5 @@ gunicorn==19.6.0
 django-slack==5.7.0
 django-allauth==0.29.0
 wagtailtinymce==4.2.1.5
-djangorestframework==3.4.0
+djangorestframework==3.9.1
 pyxero
