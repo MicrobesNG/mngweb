@@ -41,6 +41,32 @@
 
 {% block content %}
 
+ <div id="notificationModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h2 class="modal-title">COVID-19 Update</h2>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="container-fluid">
+              <div class="col-md-12">
+                <p>Our lab and bioinformatics departments are still processing all samples received prior to 24th March and we remain open to provide quotes and process orders.</p>
+                <p>Deliveries have been temporarily suspended to our site so please do not send us any samples until we are able to put alternative arrangements in place.</p>
+                <p> For additional information on our response to Covid-19 please see our <a href="/microbesng-faq/">FAQ</a>.</p>
+                <div class="col-md-12"><hr></div>
+                <div class="col-md-12" style="text-align: right">
+                  <p>Thank you, MicrobesNG Team</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   {# Feture Panels #}
   {% if self.feature_panels.all %}
     <div class="container-fluid text-center">
@@ -102,4 +128,9 @@
 
 {% block extra_js %}
   {% map_countries_served container_id='projectmap_container' height=450 %}
+     <script>
+      $(document).ready(function() {
+        $("#notificationModal").modal("show");
+      });
+    </script>
 {% endblock %}
