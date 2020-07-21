@@ -1,5 +1,5 @@
 Django>=1.9,<1.10
-wagtail==1.8
+wagtail==2.7.4
 django-bootstrap3==7.1.0
 django-ipware==1.1.5
 django-pipeline==1.6.8
