@@ -25,6 +25,12 @@
         });
       });
     </script>
+  {% else %}
+    <script>
+      $(document).ready(function() {
+        $("#notificationModal").modal("show");
+      });
+    </script>
   {% endif %}
 {% endblock %}
 
@@ -35,6 +41,35 @@
 {% endblock %}
 
 {% block content %}
+
+  <div id="notificationModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h2 class="modal-title">Christmas Shutdown</h2>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="container-fluid">
+              <div class="col-md-12">
+                <p>Please note that we will be closed over the Christmas period from 18th December - 4th January.</p>
+                <p>
+                  If you would like to send us samples prior to this break they must be received in our lab by 11th December to ensure that they are appropriately logged and stored.
+                  Following this, all samples accepted onto our system will automatically progress through our pipeline upon our return on the 4th of January.
+                </p>
+                <p>If you have any questions relating to this, please let us know.</p>
+                <div class="col-md-12"><hr></div>
+                <div class="col-md-12" style="text-align: right">
+                  <p>Thank you, MicrobesNG Team</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="container">
 
